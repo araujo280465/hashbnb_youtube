@@ -2,6 +2,7 @@
 
 @theme {
   --color-primary-400: #ff385c;
-  --color-tahiti: #3ab7bf;
-  --color-bermuda: #78dcca;
+  --font-hashbnb:
+    Airbnb Cereal VF, Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif;
 }
