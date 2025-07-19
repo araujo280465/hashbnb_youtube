@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
+import { useUserContext } from "../Contexts/UserContext";
 
-const Login = ({ user, setUser }) => {
+const Login = () => {
+  const { user, setUser } = useUserContext(); // Access user context
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [redirect, setredirect] = useState(false);

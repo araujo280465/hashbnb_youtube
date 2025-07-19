@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useUserContext } from "../Contexts/UserContext";
 
-const Header = ({ user }) => {
+const Header = () => {
+  const { user } = useUserContext(); // Access the user context
   return (
     <header className="shadow-md">
       <div className="max-w mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-8">
@@ -38,7 +40,7 @@ const Header = ({ user }) => {
           </div>
         </Link>
         <Link
-          to={user ? "/register" : "/login"}
+          to={user ? "/account/profile" : "/login"}
           className="flex items-center gap-2 rounded-full border border-gray-300 py-2 pr-4 pl-6 shadow-md"
         >
           <div className="flex items-center rounded-full p-2">

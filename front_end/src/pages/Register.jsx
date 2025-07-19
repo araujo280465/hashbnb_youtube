@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
+import { useUserContext } from "../Contexts/UserContext";
 
-const Register = ({ setUser }) => {
+const Register = () => {
+  const { setUser } = useUserContext(); // Assuming useUserContext is imported from UserContext
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -11,23 +13,24 @@ const Register = ({ setUser }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    //     if (email && password) {
-    //       try {
-    //         const { data: userDoc } = await axios.post("/users/login", {
-    //           email,
-    //           password,
-    //         });
+    if (email && password && name) {
+      try {
+        const { data: userDoc } = await axios.post("/users", {
+          name,
+          email,
+          password,
+        });
 
-    //         setUser(userDoc); // Set the user state in the parent component
-    //         setredirect(true); // Redirect to home page
-    //       } catch (error) {
-    //         alert(
-    //           `Erro ao fazer login. Verifique suas credenciais. ${error.response.data}`,
-    //         );
-    //       }
-    //     } else {
-    //       alert("Por favor, preencha email e senha.");
-    //     }
+        setUser(userDoc); // Set the user state in the parent component
+        setredirect(true); // Redirect to home page
+      } catch (error) {
+        alert(
+          `Erro ao fazer cadastro do usuário. Verifique suas credenciais. ${JSON.stringify(error)}`,
+        );
+      }
+    } else {
+      alert("Por favor, preencha email, nome e a senha.");
+    }
   };
 
   if (redirect) {
