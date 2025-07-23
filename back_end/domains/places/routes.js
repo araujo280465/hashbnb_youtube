@@ -2,6 +2,10 @@ import { Router } from "express";
 import Place from "./model.js";
 import { JWTVerify } from "../../utils/jwt.js";
 import { connectDb } from "../../config/db.js";
+import { downloadImage } from "../../utils/imageDownloader.js";
+import { __dirname } from "../../server.js";
+// AI instructions
+import path from "path";
 
 const router = Router();
 
@@ -40,6 +44,22 @@ router.post("/", async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json("Deu erro ao criar um novo lugar!");
+  }
+});
+
+router.post("/upload/link", async (req, res) => {
+  const { link } = req.body;
+
+  try {
+    // AI instructions
+    const destination = path.join(__dirname, "tmp") + path.sep;
+    const filename = await downloadImage(link, destination);
+    //await downloadImage(link, `${__dirname}/tmp/`);
+
+    res.json(filename);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json("Deu erro ao baixar a imagem!");
   }
 });
 

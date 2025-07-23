@@ -1,6 +1,9 @@
 {
   "dependencies": {
+    "image-downloader": "^4.3.0",
     "jsonwebtoken": "^9.0.2",
-    "react-router-dom": "^7.7.0"
+    "mime-types": "^3.0.1",
+    "react-router-dom": "^7.7.0",
+    "url": "^0.11.4"
   }
 }
