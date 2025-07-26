@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "fs": "^0.0.1-security",
     "image-downloader": "^4.3.0",
     "jsonwebtoken": "^9.0.2",
     "mime-types": "^3.0.1",

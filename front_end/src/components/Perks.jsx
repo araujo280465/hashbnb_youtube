@@ -19,6 +19,7 @@ const Perks = ({ perks, setPerks }) => {
           id="wifi"
           className="mr-2"
           value={"wifi"}
+          checked={perks.includes("wifi")}
           onChange={(e) => handleClick(e.target)}
         />
         Wi-Fi
@@ -47,6 +48,7 @@ const Perks = ({ perks, setPerks }) => {
           id="parking"
           className="mr-2"
           value={"parking"}
+          checked={perks.includes("parking")}
           onChange={(e) => handleClick(e.target)}
         />
         Estacionamento gratuito
@@ -75,6 +77,7 @@ const Perks = ({ perks, setPerks }) => {
           id="tv"
           className="mr-2"
           value={"tv"}
+          checked={perks.includes("tv")}
           onChange={(e) => handleClick(e.target)}
         />
         TV
@@ -103,6 +106,7 @@ const Perks = ({ perks, setPerks }) => {
           id="radio"
           className="mr-2"
           value={"radio"}
+          checked={perks.includes("radio")}
           onChange={(e) => handleClick(e.target)}
         />
         Rádio
@@ -131,6 +135,7 @@ const Perks = ({ perks, setPerks }) => {
           id="pets"
           className="mr-2"
           value={"pets"}
+          checked={perks.includes("pets")}
           onChange={(e) => handleClick(e.target)}
         />
         Pets
@@ -159,6 +164,7 @@ const Perks = ({ perks, setPerks }) => {
           id="entrance"
           className="mr-2"
           value={"entrance"}
+          checked={perks.includes("entrance")}
           onChange={(e) => handleClick(e.target)}
         />
         Entrada privada

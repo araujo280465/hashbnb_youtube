@@ -1,23 +1,20 @@
 import React from "react";
 
-const Item = () => {
+const Item = ({ place }) => {
   return (
     <a href="/" className="flex flex-col gap-2">
       <img
-        src="/images/b5619c14-5973-4c3c-825e-9ea97a3de6e4-1741624968441.jpg"
+        src={place.photo[0]}
         alt="imagem do hospede"
         className="aspect-square rounded-4xl object-cover"
       />
 
       <div>
-        <h3 className="text-xl font-semibold">Cabo Frio, Rio de Janeiro</h3>
-        <p className="truncate text-gray-600">
-          Descrição da acomodação addsadasdsd sdasddsadsdsdasad
-          sdsdsadsadsdsadsadsad4rerewrewrewr
-        </p>
+        <h3 className="text-xl font-semibold">{place.city}</h3>
+        <p className="truncate text-gray-600">{place.description}</p>
       </div>
       <p>
-        <span className="font-semibold">R$ 100,00</span> por noite
+        <span className="font-semibold">R$ {place.price}</span> por noite
       </p>
     </a>
   );
