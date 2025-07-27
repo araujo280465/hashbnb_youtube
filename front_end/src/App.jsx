@@ -9,14 +9,21 @@ import Account from "./pages/Account";
 import Header from "./components/Header";
 import Place from "./pages/Place";
 
-axios.defaults.baseURL =
-  import.meta.env.MODE === "devolopment"
-    ? "http://localhost:4000/api"
-    : "http://localhost:4000/api";
+// axios.defaults.baseURL =
+//   import.meta.env.MODE === "devolopment"
+//     ? "http://localhost:4000/api"
+//     : "https://hashbnb-youtube-wk45.onrender.com/";
+
+// Set base URL for production
+if (import.meta.env.PROD) {
+  axios.defaults.baseURL = 'https://hashbnb-youtube-wk45.onrender.com/api'
+} else {
+  axios.defaults.baseURL = 'http://localhost:4000/api'
+}
 
 axios.defaults.withCredentials = true;
 
-//console.log("import.meta.env: ", import.meta.env);
+
 
 function App() {
   return (
