@@ -1,0 +1,50 @@
+2025-07-27T18:16:52.46180906Z ==> Cloning from https://github.com/araujo280465/hashbnb_youtube
+2025-07-27T18:16:53.071812043Z ==> Checking out commit 9fc79af2be8b98ac3b47e58c6f019c1e6f356374 in branch main
+2025-07-27T18:16:58.326405625Z ==> Using Node.js version 22.16.0 (default)
+2025-07-27T18:16:58.353753574Z ==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+2025-07-27T18:17:00.556602495Z ==> Using Bun version 1.1.0 (default)
+2025-07-27T18:17:00.556623485Z ==> Docs on specifying a Bun version: https://render.com/docs/bun-version
+2025-07-27T18:17:00.662316696Z ==> Running build command 'npm run build'...
+2025-07-27T18:17:00.925903067Z 
+2025-07-27T18:17:00.925927917Z > 36_site_air_bnb@1.0.0 build
+2025-07-27T18:17:00.925937678Z > npm install --prefix back_end && npm install --prefix front_end && npm run build --prefix front_end
+2025-07-27T18:17:00.925943528Z 
+2025-07-27T18:17:04.060211802Z 
+2025-07-27T18:17:04.060240782Z added 226 packages, and audited 228 packages in 3s
+2025-07-27T18:17:04.060254742Z 
+2025-07-27T18:17:04.060259343Z 22 packages are looking for funding
+2025-07-27T18:17:04.060264083Z   run `npm fund` for details
+2025-07-27T18:17:04.06116015Z 
+2025-07-27T18:17:04.061174771Z found 0 vulnerabilities
+2025-07-27T18:17:07.036505434Z 
+2025-07-27T18:17:07.036527564Z added 201 packages, and audited 203 packages in 3s
+2025-07-27T18:17:07.036539734Z 
+2025-07-27T18:17:07.036570685Z 44 packages are looking for funding
+2025-07-27T18:17:07.036589195Z   run `npm fund` for details
+2025-07-27T18:17:07.037539315Z 
+2025-07-27T18:17:07.037549535Z found 0 vulnerabilities
+2025-07-27T18:17:07.16238172Z 
+2025-07-27T18:17:07.16240423Z > front_end@0.0.0 build
+2025-07-27T18:17:07.16240877Z > vite build
+2025-07-27T18:17:07.162412121Z 
+2025-07-27T18:17:07.75038273Z vite v7.0.4 building for production...
+2025-07-27T18:17:07.819052489Z transforming...
+2025-07-27T18:17:08.030298748Z ✓ 7 modules transformed.
+2025-07-27T18:17:08.033754298Z ✗ Build failed in 247ms
+2025-07-27T18:17:08.033788308Z error during build:
+2025-07-27T18:17:08.033807519Z [vite]: Rollup failed to resolve import "react-router-dom" from "/opt/render/project/src/front_end/src/App.jsx".
+2025-07-27T18:17:08.033815409Z This is most likely unintended because it can break your application at runtime.
+2025-07-27T18:17:08.033820649Z If you do want to externalize this module explicitly add it to
+2025-07-27T18:17:08.033825099Z `build.rollupOptions.external`
+2025-07-27T18:17:08.033829989Z     at viteLog (file:///opt/render/project/src/front_end/node_modules/vite/dist/node/chunks/dep-DZ2tZksn.js:34186:57)
+2025-07-27T18:17:08.033833579Z     at file:///opt/render/project/src/front_end/node_modules/vite/dist/node/chunks/dep-DZ2tZksn.js:34224:73
+2025-07-27T18:17:08.033837039Z     at onwarn (file:///opt/render/project/src/front_end/node_modules/@vitejs/plugin-react/dist/index.mjs:104:9)
+2025-07-27T18:17:08.033840559Z     at file:///opt/render/project/src/front_end/node_modules/vite/dist/node/chunks/dep-DZ2tZksn.js:34224:28
+2025-07-27T18:17:08.03384425Z     at onRollupLog (file:///opt/render/project/src/front_end/node_modules/vite/dist/node/chunks/dep-DZ2tZksn.js:34219:3)
+2025-07-27T18:17:08.03384771Z     at onLog (file:///opt/render/project/src/front_end/node_modules/vite/dist/node/chunks/dep-DZ2tZksn.js:34007:4)
+2025-07-27T18:17:08.03385111Z     at file:///opt/render/project/src/front_end/node_modules/rollup/dist/es/shared/node-entry.js:20818:32
+2025-07-27T18:17:08.0338559Z     at Object.logger [as onLog] (file:///opt/render/project/src/front_end/node_modules/rollup/dist/es/shared/node-entry.js:22698:9)
+2025-07-27T18:17:08.0338595Z     at ModuleLoader.handleInvalidResolvedId (file:///opt/render/project/src/front_end/node_modules/rollup/dist/es/shared/node-entry.js:21444:26)
+2025-07-27T18:17:08.03387414Z     at file:///opt/render/project/src/front_end/node_modules/rollup/dist/es/shared/node-entry.js:21402:26
+2025-07-27T18:17:08.0976557Z ==> Build failed 😞
+2025-07-27T18:17:08.09767568Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
