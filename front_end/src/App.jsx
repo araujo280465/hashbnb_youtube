@@ -9,8 +9,14 @@ import Account from "./pages/Account";
 import Header from "./components/Header";
 import Place from "./pages/Place";
 
-axios.defaults.baseURL = import.meta.env.VITE_AXIOS_BASE_URL; // Adjust the base URL as needed
+axios.defaults.baseURL =
+  import.meta.env.MODE === "devolopment"
+    ? "http://localhost:4000/api"
+    : "http://localhost:4000/api";
+
 axios.defaults.withCredentials = true;
+
+//console.log("import.meta.env: ", import.meta.env);
 
 function App() {
   return (
